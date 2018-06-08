@@ -1,0 +1,24 @@
+C:\Users\marco\source\repos\360view\360view\bin\Debug\360view.exe.config
+C:\Users\marco\source\repos\360view\360view\bin\Debug\360view.exe
+C:\Users\marco\source\repos\360view\360view\bin\Debug\360view.pdb
+C:\Users\marco\source\repos\360view\360view\obj\Debug\360view.csprojAssemblyReference.cache
+C:\Users\marco\source\repos\360view\360view\obj\Debug\MainWindow.g.cs
+C:\Users\marco\source\repos\360view\360view\obj\Debug\App.g.cs
+C:\Users\marco\source\repos\360view\360view\obj\Debug\360view_MarkupCompile.cache
+C:\Users\marco\source\repos\360view\360view\obj\Debug\360view_MarkupCompile.lref
+C:\Users\marco\source\repos\360view\360view\obj\Debug\MainWindow.baml
+C:\Users\marco\source\repos\360view\360view\obj\Debug\360view.g.resources
+C:\Users\marco\source\repos\360view\360view\obj\Debug\_360view.Properties.Resources.resources
+C:\Users\marco\source\repos\360view\360view\obj\Debug\360view.csproj.GenerateResource.cache
+C:\Users\marco\source\repos\360view\360view\obj\Debug\360view.csproj.CoreCompileInputs.cache
+C:\Users\marco\source\repos\360view\360view\obj\Debug\360view.exe
+C:\Users\marco\source\repos\360view\360view\obj\Debug\360view.pdb
+C:\Users\marco\source\repos\360View\360view\obj\Debug\Menu.g.cs
+C:\Users\marco\source\repos\360View\360view\obj\Debug\Menu.baml
+C:\Users\marco\source\repos\360View\360view\bin\Debug\360view.exe.manifest
+C:\Users\marco\source\repos\360View\360view\bin\Debug\360view.application
+C:\Users\marco\source\repos\360View\360view\obj\Debug\360view.exe.manifest
+C:\Users\marco\source\repos\360View\360view\obj\Debug\360view.application
+C:\Users\marco\source\repos\360View\360view\bin\Debug\Resources\Kv SAMSUNG.jpg
+C:\Users\marco\source\repos\360View\360view\obj\Debug\360view_Content.g.cs
+C:\Users\marco\source\repos\360View\360view\obj\Debug\360view.TrustInfo.xml
