@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="360view.exe" size="13241800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="360view.exe" size="705480">
       <assemblyIdentity name="360view" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PhjaK84jjVwZsnEDUbsek2nJvPO5sQnPecd4ilNqMhA=</dsig:DigestValue>
+        <dsig:DigestValue>TPoEEv3hHAr5NB7lNkONNrLEs+Ozt4r/VrmEUfn7fyw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -60,15 +60,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\Kv SAMSUNG.jpg" size="313964">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rdUv/o6Uhlm4MSmrRyEwiFAw3ndJb63/+XxeFkFq/WE=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

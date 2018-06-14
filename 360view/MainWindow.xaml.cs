@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,7 +33,7 @@ namespace _360view
         private Opcoes visao;
         private double posicao = 1;
         private bool comZoom = false;
-
+        private bool giroAtivo = false;
 
         public MainWindow(String modulo, ObservableCollection<Opcoes> visoes)
         {
@@ -42,6 +43,8 @@ namespace _360view
             this.modulo = modulo;
             this.visoes = visoes;
             InitializeComponent();
+            grid.Width = SystemParameters.PrimaryScreenWidth - 100;
+            grid.Height = SystemParameters.PrimaryScreenHeight - 100;
             scrollViewer.ScrollChanged += OnScrollViewerScrollChanged;
             scrollViewer.MouseLeftButtonUp += OnMouseLeftButtonUp;
             scrollViewer.PreviewMouseLeftButtonUp += OnMouseLeftButtonUp;
@@ -66,9 +69,28 @@ namespace _360view
             }
             visao = this.visoes[0];
             carregaImage();
+            carregaBotoes();
             AjustaImagem();
-
         }
+
+
+        private void carregaBotoes()
+        {
+            String caminho1 = String.Concat("c:/images/zoommais.png");
+            String caminho2 = String.Concat("c:/images/zoommenus.png");
+            try
+            {
+                BitmapImage bitmapImage1= new BitmapImage(new Uri(caminho1));
+                BitmapImage bitmapImage2 = new BitmapImage(new Uri(caminho2));
+                zoomPlus.Source = bitmapImage1;
+                zoomMinus.Source = bitmapImage2;
+            }
+            catch
+            {
+
+            }
+        }
+
 
 
         private void carregaImage()
@@ -78,6 +100,7 @@ namespace _360view
             {
                 BitmapImage bitmapImage = new BitmapImage(new Uri(caminho));
                 image360.Source = bitmapImage;
+                
             }
             catch
             {
@@ -197,15 +220,15 @@ namespace _360view
 
             if (e.Delta > 0)
             {
-                slider.Value += 1;
+                slider.Value += 0.5;
             }
             if (e.Delta < 0)
             {
-                slider.Value -= 1;
+                slider.Value -= 0.5;
             }
 
             e.Handled = true;
-
+            
         }
 
         void OnMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -219,21 +242,14 @@ namespace _360view
         void OnSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             comZoom = (e.NewValue > 1);
-
             scaleTransform.ScaleX = e.NewValue;
             scaleTransform.ScaleY = e.NewValue;
-
-
-            var centerOfViewport = new Point(scrollViewer.ViewportWidth / 2, scrollViewer.ViewportHeight / 2);
-            lastCenterPositionOnTarget = scrollViewer.TranslatePoint(centerOfViewport, grid);
+            var centerOfViewport = new Point(scrollViewer.ViewportWidth * 20, scrollViewer.ViewportHeight * 20);
+            lastCenterPositionOnTarget = scrollViewer.TranslatePoint(centerOfViewport, tela);
         }
 
         void OnScrollViewerScrollChanged(object sender, ScrollChangedEventArgs e)
         {
-
-
-
-
             if (e.ExtentHeightChange != 0 || e.ExtentWidthChange != 0)
             {
                 Point? targetBefore = null;
@@ -280,6 +296,19 @@ namespace _360view
             }
         }
 
+        private void zoomPlus_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            slider.Value += 0.1;
+        }
 
+        private void zoomMinus_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            slider.Value -= 0.1;
+        }
+
+        private void tela_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+           
+        }
     }
 }
